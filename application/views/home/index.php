@@ -169,12 +169,12 @@
 											<div class="col-md-6 pd5">
 												<span class="maskimg1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
 												<span class="fa fa-exchange" id="togglebtn"></span>
-												<input type="email" id="from_city" name="from_city" class="form-control brds" placeholder="From" required>
+												<input type="text" id="from_city" name="from_city" class="form-control brds" placeholder="From" required>
 											</div>
 											<div class="col-md-6 bs4">
 
 												<span class="maskimg1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-												<input type="email" class="form-control" id="to_city" name="to_city" placeholder="To" required>
+												<input type="text" class="form-control" id="to_city" name="to_city" placeholder="To" required>
 											</div>
 											</div>
 											</div>
@@ -182,11 +182,11 @@
 												<div class="row">
 											<div class="col-md-4 pd5">
 												<span class="maskimg f_cal"></span>
-												<input type="email" class="form-control" id="departing_1" placeholder="Departure date" required>
+												<input type="text" class="form-control" id="departing_1" placeholder="Departure date" required>
 											</div>
 											<div class="col-md-4 pd5">
 												<span class="maskimg f_cal"></span>
-												<input type="email" class="form-control" id="date_tavel_1" placeholder="Return(Optional)">
+												<input type="text" class="form-control" id="date_tavel_1" placeholder="Return(Optional)">
 											</div>
 											<div class="col-md-4 pd5">
 												<button type="submit" class="nbtm">Search</button>
