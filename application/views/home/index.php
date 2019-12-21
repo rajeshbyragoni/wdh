@@ -163,18 +163,18 @@
 
 								<div class="tab-pane active" id="bus">
 									<div class="hotels-form">
-										<form action="#" method="post">
+										<form action="<?php echo base_url(); ?>bus/search" method="post">
 											<div class="col-md-7 pd5">
 											<div class="row">
 											<div class="col-md-6 pd5">
 												<span class="maskimg1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
 												<span class="fa fa-exchange" id="togglebtn"></span>
-												<input type="email" class="form-control brds" placeholder="From">
+												<input type="email" id="from_city" name="from_city" class="form-control brds" placeholder="From" required>
 											</div>
 											<div class="col-md-6 bs4">
 
 												<span class="maskimg1"><i class="fa fa-map-marker" aria-hidden="true"></i></span>
-												<input type="email" class="form-control" placeholder="To">
+												<input type="email" class="form-control" id="to_city" name="to_city" placeholder="To" required>
 											</div>
 											</div>
 											</div>
@@ -182,16 +182,12 @@
 												<div class="row">
 											<div class="col-md-4 pd5">
 												<span class="maskimg f_cal"></span>
-												<input type="email" class="form-control" id="datepicker2" placeholder="Daparture date">
+												<input type="email" class="form-control" id="datepicker2" placeholder="Departure date" required>
 											</div>
 											<div class="col-md-4 pd5">
 												<span class="maskimg f_cal"></span>
-												<input type="email" class="form-control" id="datepicker3" placeholder="Return date">
+												<input type="email" class="form-control" id="datepicker3" placeholder="Return(Optional)">
 											</div>
-											
-											
-											
-
 											<div class="col-md-4 pd5">
 												<button type="submit" class="nbtm">Search</button>
 											</div> 
