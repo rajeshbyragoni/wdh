@@ -146,7 +146,12 @@
 		  return $pic;
 		 }
 		
-		
+		public function get_destination_list($query){ 
+		$this->db->like('city', $query);
+		$this->db->where('status', '1');
+        $this->db->limit(10);
+		return $this->db->get('busdestination');
+	}		
 		
 		
 	}
