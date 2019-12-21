@@ -12,7 +12,6 @@
 	<link rel="stylesheet" href="css/bootstrap.min.css">
 	<link rel="stylesheet" href="css/animate.css">
 	<link rel="stylesheet" href="css/hover-min.css">
-	<link rel="stylesheet" href="css/jquery-ui.min.css">
 	<link rel="stylesheet" href="css/meanmenu.min.css">
 	<link rel="stylesheet" href="css/owl.carousel.min.css">
 	<link rel="stylesheet" href="css/slick.css">
@@ -23,6 +22,7 @@
 	<link rel="stylesheet" href="css/assets/revolution/layers.css">
 	<link rel="stylesheet" href="css/assets/revolution/navigation.css">
 	<link rel="stylesheet" href="css/assets/revolution/settings.css">
+	<link rel="stylesheet" href="css/jquery-ui.css">
 	<link rel="stylesheet" href="css/style.css">
 	<link rel="stylesheet" href="css/slider_home.css">
 	<link rel="stylesheet" href="css/responsive.css">
@@ -298,11 +298,11 @@
 												<div class="row">
 											<div class="col-md-3 pd5">
 												<span class="maskimg f_cal"></span>
-												<input type="email" class="form-control" placeholder="Daparture date">
+												<input type="email" class="form-control" id="departing_1" placeholder="Daparture date">
 											</div>
 											<div class="col-md-2 pd5">
 												<span class="maskimg f_cal"></span>
-												<input type="email" class="form-control" placeholder="Return date">
+												<input type="email" class="form-control" id="date_tavel_1" placeholder="Return date">
 											</div>
 											<div class="col-md-2 pd5">
 												<div class="form-group">
@@ -1482,6 +1482,7 @@
     		<script src="js/imagesloaded.pkgd.min.js"></script>
     		<!-- chossen js -->
     		<script src="js/chosen.jquery.min.js"></script>
+    		<link rel="stylesheet" href="js/jquery-ui.min.js">
     		<!-- Revolution JS -->
     		<script src="js/assets/revolution/jquery.themepunch.revolution.min.js"></script>
     		<script src="js/assets/revolution/jquery.themepunch.tools.min.js"></script>
@@ -1513,6 +1514,7 @@
     				document.getElementById("mycart").style.width = "0";
     			}
     		</script>
+
     		<script>
     			$(document).ready(function($) {
     				$('.btnForgetPwd').click(function(event) {
@@ -1524,7 +1526,50 @@
     					$('.login_m').show();
     				});
     			});	
+
     		</script>
+    	<script>
+$(document).ready(function(){
+    $('#departing_1').datepicker(
+    {
+      minDate : 0,
+      onClose: function()
+      {
+        var minDate = $(this).datepicker('getDate');
+        minDate.setDate(minDate.getDate() + 1);
+        date_selected = (minDate.getMonth() + 1) + '/' + (minDate.getDate()) + '/' + minDate.getFullYear();
+        $('#retirn_1').datepicker("option", "minDate", date_selected);
+      }
+    });
+
+    $('#retirn_1').datepicker(
+    {
+      minDate : 1
+    });
+
+  });
+</script> 
+<script>
+$(document).ready(function(){
+    $('#date_tavel_1').datepicker(
+    {
+      minDate : 0,
+      onClose: function()
+      {
+        var minDate = $(this).datepicker('getDate');
+        minDate.setDate(minDate.getDate() + 1);
+        date_selected = (minDate.getMonth() + 1) + '/' + (minDate.getDate()) + '/' + minDate.getFullYear();
+        $('#date_retun_1').datepicker("option", "minDate", date_selected);
+      }
+    });
+
+    $('#date_retun_1').datepicker(
+    {
+      minDate : 1
+    });
+
+  });
+</script>  
     		<!--<script type="text/javascript">
   $(document).ready(function(){
   $('.dropdown').change(function(){
