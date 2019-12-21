@@ -14,6 +14,7 @@
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/assets/revolution/layers.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/assets/revolution/navigation.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/assets/revolution/settings.css">
+<link rel="stylesheet" href="<?php echo base_url();?>assets/css/jquery-ui.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/style.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/slider_home.css">
 <link rel="stylesheet" href="<?php echo base_url();?>assets/css/responsive.css">

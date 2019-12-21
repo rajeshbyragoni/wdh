@@ -182,11 +182,11 @@
 												<div class="row">
 											<div class="col-md-4 pd5">
 												<span class="maskimg f_cal"></span>
-												<input type="email" class="form-control" id="datepicker2" placeholder="Departure date" required>
+												<input type="email" class="form-control" id="departing_1" placeholder="Departure date" required>
 											</div>
 											<div class="col-md-4 pd5">
 												<span class="maskimg f_cal"></span>
-												<input type="email" class="form-control" id="datepicker3" placeholder="Return(Optional)">
+												<input type="email" class="form-control" id="date_tavel_1" placeholder="Return(Optional)">
 											</div>
 											<div class="col-md-4 pd5">
 												<button type="submit" class="nbtm">Search</button>
@@ -746,5 +746,48 @@
 				});
 			});	
 		</script>
+		<script>
+$(document).ready(function(){
+    $('#departing_1').datepicker(
+    {
+      minDate : 0,
+      onClose: function()
+      {
+        var minDate = $(this).datepicker('getDate');
+        minDate.setDate(minDate.getDate() + 1);
+        date_selected = (minDate.getMonth() + 1) + '/' + (minDate.getDate()) + '/' + minDate.getFullYear();
+        $('#retirn_1').datepicker("option", "minDate", date_selected);
+      }
+    });
+
+    $('#retirn_1').datepicker(
+    {
+      minDate : 1
+    });
+
+  });
+</script> 
+<script>
+$(document).ready(function(){
+    $('#date_tavel_1').datepicker(
+    {
+      minDate : 0,
+      onClose: function()
+      {
+        var minDate = $(this).datepicker('getDate');
+        minDate.setDate(minDate.getDate() + 1);
+        date_selected = (minDate.getMonth() + 1) + '/' + (minDate.getDate()) + '/' + minDate.getFullYear();
+        $('#date_retun_1').datepicker("option", "minDate", date_selected);
+      }
+    });
+
+    $('#date_retun_1').datepicker(
+    {
+      minDate : 1
+    });
+
+  });
+</script> 
+
 </body>
 </html>
