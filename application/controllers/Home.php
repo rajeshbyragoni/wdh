@@ -25,6 +25,22 @@ class Home extends CI_Controller {
 		$this->load->view('errors/404',$data);
 	}
 
+	function get_busDestinations(){
+		ini_set('memory_limit', '-1');
+		$term = $this->input->get('term'); //retrieve the search term that autocomplete sends
+		$term = trim(strip_tags($term));
+		$destinations = $this->Common_model->get_destination_list($term)->result();
+		
+		foreach($destinations as $destination){
+			$destinations['label'] = $destination->city;
+			$destinations['value'] = $destination->city;
+			$destinations['id'] = $destination->destid;
+			$result[] = $destinations; 
+		}
+		// echo '<pre>da'; print_r($result); exit();
+		echo json_encode($result);//format the array into json data
+	}
+
 	
 
 }
