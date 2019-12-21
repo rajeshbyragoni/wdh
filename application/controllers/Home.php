@@ -9,7 +9,7 @@ class Home extends CI_Controller {
     }
 
 	public function index(){
-		echo "asfasd";
+		echo "dsfdsffdsf";
 		$this->load->view('home/index');
 	}
 	
