@@ -30,3 +30,17 @@
 <script src="<?php echo base_url();?>assets/js/colors.js"></script>
 <script src="<?php echo base_url();?>assets/js/jquery-customselect.js"></script>
 <script src="<?php echo base_url();?>assets/js/custom.js"></script>
+
+<script>
+	$("#from_city,#to_city").autocomplete({
+	source: "<?php echo site_url(); ?>home/get_busDestinations",
+	minLength: 2, //search after two characters
+	autoFocus: true, // first item will automatically be focused
+	change: function (event, ui) {
+	if (ui.item == null){ 
+	//here is null if entered value is not match in suggestion list
+	$(this).val((ui.item ? ui.item.id : ""));
+			  }
+			}
+		});
+</script>
