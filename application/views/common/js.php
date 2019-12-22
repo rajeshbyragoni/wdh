@@ -30,6 +30,7 @@
 <script src="<?php echo base_url();?>assets/js/colors.js"></script>
 <script src="<?php echo base_url();?>assets/js/jquery-customselect.js"></script>
 <script src="<?php echo base_url();?>assets/js/custom.js"></script>
+<script src="<?php echo base_url();?>assets/js/assets/revolution/extensions/jquery-ui.js"></script>
 
 <script>
 	$("#from_city,#to_city").autocomplete({
