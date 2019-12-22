@@ -405,7 +405,7 @@
    $(document).ready(function(){
       //if close button is clicked  
       var a = ['bus']; var i = 0; var random_id="";
-      function nextCall() { alert("hello");
+      function nextCall() { //alert("hello");
          
          if(i == a.length) {
             $('#loading').fadeOut();
