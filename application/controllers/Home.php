@@ -1,6 +1,7 @@
 <?php
 defined('BASEPATH') OR exit('No direct script access allowed');
-session_start();
+if (session_status() == PHP_SESSION_NONE){ session_start(); }
+error_reporting(0);
 class Home extends CI_Controller {
  	public function __construct() {
         parent::__construct();
