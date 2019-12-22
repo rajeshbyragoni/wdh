@@ -94,5 +94,8 @@ defined('INACTIVE_VALUE')    OR define('INACTIVE_VALUE', 2);
 defined('BOOLEAN_TRUE')     OR define('BOOLEAN_TRUE', TRUE);
 defined('BOOLEAN_FALSE')    OR define('BOOLEAN_FALSE', FALSE);
 
-defined('WEB_URL') OR define('WEB_URL',$_SERVER['HTTP_HOST'].'/makemyoffer/');
+defined('WEB_URL') OR define('WEB_URL',$_SERVER['HTTP_HOST']);
+
 defined('IMG_DIR') OR define('IMG_DIR',WEB_URL.'admin_panel/assets/img/');
+
+defined('CURRENCY_SYMBOL') OR define('CURRENCY_SYMBOL','₹');
